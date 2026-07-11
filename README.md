@@ -155,7 +155,7 @@ Some ideas I would like to add later:
 Example:
 
 ## Workflow design
-![image alt]()
+![image alt](https://github.com/n8n-workflows-projects/employee-salary-analyzer/blob/2bc986ead3cd2f2987ee00f9ae71412d3441bd6d/Screenshot%202026-07-11%20114139.png)
 
 ## workflow resource
 ![image alt](https://github.com/n8n-workflows-projects/employee-salary-analyzer/blob/b8b0b42cdcbfd86154f2a7f9c32179de7d14bd0b/Screenshot%202026-07-11%20113357.png)
