@@ -158,7 +158,7 @@ Example:
 ![image alt]()
 
 ## workflow resource
-![image alt]()
+![image alt](https://github.com/n8n-workflows-projects/employee-salary-analyzer/blob/b8b0b42cdcbfd86154f2a7f9c32179de7d14bd0b/Screenshot%202026-07-11%20113357.png)
 
 ## workflow output
 ![image alt](https://github.com/n8n-workflows-projects/employee-salary-analyzer/blob/1d8a1e38787bb3b8829012c680a738f9b82763c9/Screenshot%202026-07-11%20113138.png)
