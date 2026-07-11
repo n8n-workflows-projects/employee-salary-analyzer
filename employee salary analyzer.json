@@ -1,0 +1,449 @@
+{
+  "name": "employee salary analyzer",
+  "nodes": [
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "18HdksKDZx_niXfYSXwbui_GlDpmV9J76tUVaC9JHjeo",
+          "mode": "list",
+          "cachedResultName": "employe salary analyzer",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/18HdksKDZx_niXfYSXwbui_GlDpmV9J76tUVaC9JHjeo/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "total employess",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/18HdksKDZx_niXfYSXwbui_GlDpmV9J76tUVaC9JHjeo/edit#gid=0"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        416,
+        0
+      ],
+      "id": "96e2dee8-59b6-41ec-a373-cde8ab37ac5d",
+      "name": "Get row(s) in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "nWxKoPNhLKKV7xc6",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "331271af-d969-4df3-855f-936b72b95553",
+              "leftValue": "={{ $json.Salary }}",
+              "rightValue": 50000,
+              "operator": {
+                "type": "number",
+                "operation": "gt"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        624,
+        0
+      ],
+      "id": "66d4a6f3-43e9-46ad-abd0-e8de29af3b73",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "18HdksKDZx_niXfYSXwbui_GlDpmV9J76tUVaC9JHjeo",
+          "mode": "list",
+          "cachedResultName": "employe salary analyzer",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/18HdksKDZx_niXfYSXwbui_GlDpmV9J76tUVaC9JHjeo/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1661702913,
+          "mode": "list",
+          "cachedResultName": "senior employess",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/18HdksKDZx_niXfYSXwbui_GlDpmV9J76tUVaC9JHjeo/edit#gid=1661702913"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        832,
+        -96
+      ],
+      "id": "2b801661-6f77-48a9-9c59-0dbcb90d1ed7",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "nWxKoPNhLKKV7xc6",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "18HdksKDZx_niXfYSXwbui_GlDpmV9J76tUVaC9JHjeo",
+          "mode": "list",
+          "cachedResultName": "employe salary analyzer",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/18HdksKDZx_niXfYSXwbui_GlDpmV9J76tUVaC9JHjeo/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 539532184,
+          "mode": "list",
+          "cachedResultName": "junior employees",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/18HdksKDZx_niXfYSXwbui_GlDpmV9J76tUVaC9JHjeo/edit#gid=539532184"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        832,
+        96
+      ],
+      "id": "d058daa0-5149-4079-bd5c-6781ae2a1bf6",
+      "name": "Append row in sheet1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "nWxKoPNhLKKV7xc6",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1040,
+        96
+      ],
+      "id": "3de9d2df-435e-4ebc-80c7-c3637912d342",
+      "name": "No Operation, do nothing"
+    },
+    {
+      "parameters": {
+        "fieldsToSummarize": {
+          "values": [
+            {
+              "field": "Employee ID"
+            },
+            {
+              "aggregation": "sum",
+              "field": "Salary"
+            },
+            {
+              "aggregation": "average",
+              "field": "Salary"
+            },
+            {
+              "aggregation": "max",
+              "field": "Salary"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.summarize",
+      "typeVersion": 1.1,
+      "position": [
+        1040,
+        -96
+      ],
+      "id": "38005645-d687-4524-80af-7e79d3476619",
+      "name": "Summarize"
+    },
+    {
+      "parameters": {
+        "sendTo": "bhoominigokam9@gmail.com",
+        "subject": "Daily Employee Salary Report",
+        "emailType": "text",
+        "message": "=Hello HR Team,  \n\nThe employee salary analysis has been completed successfully.  \n\nSummary:  \n\n• Total Senior Employees : {{ $json.count_Employee_ID }}\n• Total Senior Salary Allocated : ₹{{ $json.sum_Salary }}\n• Average Salary : ₹{{ $json.average_Salary }}\n• Highest Salary : ₹{{ $json.max_Salary  }}\n\nThe senior employee list has been saved to the Google Sheet.",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        1248,
+        -96
+      ],
+      "id": "0715815f-4499-4392-a61c-7e5cabb59d5f",
+      "name": "Send a message",
+      "webhookId": "294a2559-bbae-4b76-a159-bc0614efe4eb",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "spAMfrkQvbMRDGk4",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 9
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        -64,
+        0
+      ],
+      "id": "19331f29-70ad-494c-afb7-aa33929112ab",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "18HdksKDZx_niXfYSXwbui_GlDpmV9J76tUVaC9JHjeo",
+          "mode": "list",
+          "cachedResultName": "employe salary analyzer",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/18HdksKDZx_niXfYSXwbui_GlDpmV9J76tUVaC9JHjeo/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "total employess",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/18HdksKDZx_niXfYSXwbui_GlDpmV9J76tUVaC9JHjeo/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [
+            "Employee ID"
+          ],
+          "schema": [
+            {
+              "id": "Employee ID",
+              "displayName": "Employee ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Employee Name",
+              "displayName": "Employee Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Department",
+              "displayName": "Department",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Salary",
+              "displayName": "Salary",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Experience (Years)",
+              "displayName": "Experience (Years)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "City",
+              "displayName": "City",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        176,
+        0
+      ],
+      "id": "4826afd0-1304-4af1-83f7-11ce3ee04d78",
+      "name": "Update row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "nWxKoPNhLKKV7xc6",
+          "name": "Google Sheets account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Get row(s) in sheet": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Append row in sheet1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet1": {
+      "main": [
+        []
+      ]
+    },
+    "Append row in sheet": {
+      "main": [
+        [
+          {
+            "node": "Summarize",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Summarize": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Update row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update row in sheet": {
+      "main": [
+        [
+          {
+            "node": "Get row(s) in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": true
+  },
+  "versionId": "51b265f6-36e8-4b18-9b76-f4170f939966",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "9a7dce7f5862a86b54106ae3b7fae81da837e6bc8dd2c16b964705cdf9486f6b"
+  },
+  "nodeGroups": [],
+  "id": "IgdA0qdHRqwBc2SX",
+  "tags": []
+}
