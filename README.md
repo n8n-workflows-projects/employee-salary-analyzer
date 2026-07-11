@@ -163,7 +163,7 @@ Example:
 ## workflow output
 ![image alt](https://github.com/n8n-workflows-projects/employee-salary-analyzer/blob/1d8a1e38787bb3b8829012c680a738f9b82763c9/Screenshot%202026-07-11%20113138.png)
 
-![image alt]()
+![image alt](https://github.com/n8n-workflows-projects/employee-salary-analyzer/blob/202984748c27e6e5bff133fb13c140dd76c54d90/Screenshot%202026-07-11%20113326.png)
 
 
 ---
